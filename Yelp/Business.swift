@@ -62,7 +62,7 @@ class Business: NSObject {
             distance = nil
         }
         
-        let rating = dictionary["rating"] as? Double
+        let rating = dictionary["rating"] as! Double
         if rating != nil {
             switch rating {
                 case 1:
@@ -71,7 +71,7 @@ class Business: NSObject {
                 case 1.5:
                     self.ratingImage = UIImage(named: "stars_1half")
                     break
-                case 2:
+                case 2.0:
                     self.ratingImage = UIImage(named: "stars_2")
                     break
                 case 2.5:
